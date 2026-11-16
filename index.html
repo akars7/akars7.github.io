@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaan Akar, data scientist</title>
+<meta name="description" content="Kaan Akar, data scientist in sports analytics and experimentation. Projects, experience and contact.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --chalk: #f2f4f0;
+    --turf: #e3e9e1;
+    --line: #c5cfc3;
+    --ink: #16352a;
+    --ink-soft: #4a5f55;
+    --pitch: #1d7a4c;
+    --fans: #2a78d6;
+    --empty: #eb6834;
+    --measure: 68ch;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--chalk);
+    color: var(--ink);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-variation-settings: "wdth" 100;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  a { color: var(--pitch); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--pitch); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* hero: the one loud element */
+  .hero { position: relative; overflow: hidden; padding: 72px 0 64px; border-bottom: 2px solid var(--ink); }
+  .hero svg.circle { position: absolute; right: -140px; top: 50%; transform: translateY(-50%);
+    width: 520px; height: 520px; pointer-events: none; }
+  .name { font-weight: 700; font-size: 1.05rem; margin: 0 0 40px; }
+  .name span { color: var(--ink-soft); font-weight: 400; }
+  h1 {
+    position: relative;
+    font-variation-settings: "wdth" 125;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 6.2vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0;
+    max-width: 15ch;
+  }
+  .lede { position: relative; max-width: 54ch; font-size: 1.2rem; color: var(--ink-soft); margin: 28px 0 32px; }
+  .lede strong { color: var(--ink); font-weight: 600; }
+  .actions { position: relative; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 12px 20px; border-radius: 4px; font-weight: 600;
+    text-decoration: none; border: 2px solid var(--ink); color: var(--ink);
+  }
+  .btn.primary { background: var(--ink); color: var(--chalk); }
+  .btn:hover { background: var(--turf); }
+  .btn.primary:hover { background: var(--pitch); border-color: var(--pitch); }
+
+  section { padding: 64px 0 24px; }
+  h2 {
+    font-variation-settings: "wdth" 115;
+    font-weight: 800; font-size: 1.75rem; line-height: 1.2; margin: 0 0 28px;
+  }
+  h3 { font-variation-settings: "wdth" 110; font-weight: 700; font-size: 1.3rem; line-height: 1.25; margin: 0 0 8px; }
+  p { margin: 0 0 12px; max-width: var(--measure); }
+  .muted { color: var(--ink-soft); }
+  .tools { font-size: 0.92rem; color: var(--ink-soft); }
+  .links { display: flex; flex-wrap: wrap; gap: 18px; font-weight: 600; margin-top: 10px; }
+
+  /* featured project */
+  .featured {
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center;
+    background: var(--turf); border-radius: 8px; padding: 32px;
+  }
+  .featured h3 { font-size: 1.6rem; }
+  .status { display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--pitch); margin-bottom: 10px; }
+  figure { margin: 0; }
+  figcaption { font-size: 0.85rem; color: var(--ink-soft); margin-top: 10px; }
+  .bars text { font-family: "Archivo", sans-serif; fill: var(--ink); }
+
+  /* project list: ruled rows, not cards */
+  .list { list-style: none; margin: 8px 0 0; padding: 0; }
+  .list li { display: grid; grid-template-columns: 9rem 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid var(--line); }
+  .list li:last-child { border-bottom: 1px solid var(--line); }
+  .when { font-size: 0.92rem; color: var(--ink-soft); padding-top: 4px; }
+  .list h3 { font-size: 1.15rem; }
+
+  .edu { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 40px; }
+  footer { margin-top: 64px; padding: 40px 0 56px; border-top: 2px solid var(--ink); }
+  footer h2 { margin-bottom: 12px; }
+
+  @media (max-width: 760px) {
+    .hero { padding: 48px 0 44px; }
+    .hero svg.circle { width: 340px; height: 340px; right: -170px; opacity: 0.6; }
+    .featured { grid-template-columns: 1fr; padding: 22px; gap: 24px; }
+    .list li { grid-template-columns: 1fr; gap: 4px; }
+    .edu { grid-template-columns: 1fr; }
+    .lede { font-size: 1.08rem; }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg class="circle" viewBox="0 0 520 520" aria-hidden="true">
+    <circle cx="260" cy="260" r="200" fill="none" stroke="#c5cfc3" stroke-width="3"/>
+    <line x1="260" y1="0" x2="260" y2="520" stroke="#c5cfc3" stroke-width="3"/>
+    <circle cx="260" cy="260" r="6" fill="#c5cfc3"/>
+  </svg>
+  <div class="wrap">
+    <p class="name">Kaan Akar <span>Data scientist, sports analytics</span></p>
+    <h1>Empty stadiums erased two-thirds of football's home advantage.</h1>
+    <p class="lede">I measured that across 14,507 matches, then turned it into a live app a coach can read.
+      I'm finishing an <strong>MEng in Applied Data Science</strong> at the University of Victoria, and I build
+      sports analytics, experiments and the tools that put them in front of decision makers.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://ghost-games-kaan.azurewebsites.net">Open the live app</a>
+      <a class="btn" href="https://github.com/akars7">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/kaan-akar">LinkedIn</a>
+      <a class="btn" href="mailto:kaanakargs@gmail.com">Email me</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="work">
+    <h2 id="work">Projects</h2>
+
+    <article class="featured">
+      <div>
+        <span class="status">Live on Azure</span>
+        <h3>Ghost Games: what empty stadiums reveal about home advantage</h3>
+        <p>COVID emptied Europe's top five leagues, creating a natural experiment. A regression that controls
+          for team strength shows 60–68% of home advantage disappeared without fans, and the referee's
+          yellow-card lean toward the home side vanished completely. Betting markets adjusted, but not enough.</p>
+        <p class="tools">Python, statsmodels, bootstrap and delta-method CIs, empirical Bayes;
+          Streamlit, Plotly, Docker, GitHub Actions, Azure App Service</p>
+        <div class="links">
+          <a href="https://ghost-games-kaan.azurewebsites.net">Live app</a>
+          <a href="https://github.com/akars7/ghost-games">Code and methods</a>
+        </div>
+      </div>
+      <figure>
+        <svg class="bars" viewBox="0 0 300 200" role="img" aria-labelledby="chart-title">
+          <title id="chart-title">Home win rate: 45% with fans, 40% in empty stadiums</title>
+          <line x1="20" y1="160" x2="290" y2="160" stroke="#c5cfc3" stroke-width="2"/>
+          <rect x="50" y="25" width="80" height="135" rx="3" fill="#2a78d6"/>
+          <rect x="170" y="40" width="80" height="120" rx="3" fill="#eb6834"/>
+          <text x="90" y="18" text-anchor="middle" font-size="15" font-weight="700">45%</text>
+          <text x="210" y="33" text-anchor="middle" font-size="15" font-weight="700">40%</text>
+          <text x="90" y="182" text-anchor="middle" font-size="13">With fans</text>
+          <text x="210" y="182" text-anchor="middle" font-size="13">Empty</text>
+        </svg>
+        <figcaption>Home win rate. The lost wins went to the away team, not to draws.</figcaption>
+      </figure>
+    </article>
+
+    <ul class="list">
+      <li>
+        <span class="when">In progress</span>
+        <div>
+          <h3>What sells political and business news? 32,487 real headline A/B tests</h3>
+          <p>Upworthy tested 2 to 8 headlines for nearly every story it published. Comparing versions of the same
+            story, I measure whether negative and outrage wording wins more clicks on political and business news,
+            and how many of the "winning" headlines were luck. Patterns found in one half of the archive are
+            pre-registered, then checked on the other half.</p>
+          <p class="tools">Python, statsmodels, fixed-effects models, false discovery rate, empirical Bayes, NLP</p>
+          <div class="links"><a href="https://github.com/akars7/headline-experiments">Code</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="when">Dec 2025</span>
+        <div>
+          <h3>Evaluating HippoRAG for multi-hop retrieval</h3>
+          <p>Built and evaluated a knowledge-graph retrieval pipeline on HotpotQA and compared it with LightRAG on
+            precision, recall, F1, MRR and exact match.</p>
+          <p class="tools">Python, OpenIE, NER, Contriever embeddings</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Aug 2025</span>
+        <div>
+          <h3>Reddit AIMI: personality-based LLM ensemble</h3>
+          <p>Eight personality-conditioned LLM agents judged Reddit posts; a fine-tuned DistilBERT ensemble combined
+            their verdicts. Team of four.</p>
+          <p class="tools">PyTorch, Transformers, Mistral</p>
+          <div class="links"><a href="https://github.com/JoelESol/Ensemble-Learning-AITA">Code</a></div>
+        </div>
+      </li>
+      <li>
+        <span class="when">Aug 2025</span>
+        <div>
+          <h3>Phishing email detection</h3>
+          <p>Feature-engineered ML pipeline that classifies phishing emails with 98% accuracy, presented to industry
+            professionals and graduate peers.</p>
+          <p class="tools">Python, scikit-learn, text features</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Apr 2025</span>
+        <div>
+          <h3>Football player recommendation system</h3>
+          <p>Matches players to a team's needs using performance embeddings for 2,763 players and 267 stats from the
+            top five leagues, with a case study on Brighton's data-driven recruitment.</p>
+          <p class="tools">SQL vector search, k-NN and cosine similarity, Power BI</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="experience">
+    <h2 id="experience">Experience</h2>
+    <ul class="list">
+      <li>
+        <span class="when">2026</span>
+        <div>
+          <h3>Health Information Analyst Co-op, BC Ministry of Health</h3>
+          <p>Converts SAS business logic to SQL, validates rate-setting calculations that affect provincial
+            funding, and forecasts long-term care bed demand and budget over ten years, reported in Power BI.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Jan – Apr 2026</span>
+        <div>
+          <h3>Data Analytics Intern, MyTorso.AI, Vancouver</h3>
+          <p>Queried physiological data in BigQuery and analysed links between breathing, heart rate, HRV and PPG
+            signals in Python, supporting a future resonance-frequency prediction model.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Apr – Nov 2023</span>
+        <div>
+          <h3>Business and Data Analytics Intern, Zer Koç, Istanbul</h3>
+          <p>Built a regression model to price TV advertising, raising R² from 94.1% to 96.5% through feature
+            tuning, and turned it into pricing insights for the sales team.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
+    <div class="edu">
+      <div>
+        <h3>MEng, Applied Data Science</h3>
+        <p class="muted">University of Victoria, expected December 2026, GPA 3.75 of 4</p>
+      </div>
+      <div>
+        <h3>BEng, Electrical Engineering</h3>
+        <p class="muted">Istanbul Technical University, 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h2>Let's talk</h2>
+    <p>I'm looking for data science roles in sports, games and media. The quickest way to reach me is
+      <a href="mailto:kaanakargs@gmail.com">email</a> or <a href="https://www.linkedin.com/in/kaan-akar">LinkedIn</a>.</p>
+  </footer>
+</main>
+</body>
+</html>
